@@ -25,10 +25,7 @@ mongoose.connect('mongodb://localhost:27017/yummyplaces', {
 
 
 })
-// .then(() => {
-//     console.log('mongo is connected')
-// })
-// const { yummyplaceSchemaJoi, reviewSchemaJoi } = require('./schemasJoi.js');
+
 const db = mongoose.connection
 
 db.on("error", () => { console.log(`mongoose connection error`) })
