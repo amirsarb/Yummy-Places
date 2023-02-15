@@ -65,7 +65,7 @@ app.get('/', async (req, res) => {
     // const place = new Yummyplace({ title: 'yummyOne', price: 1200, description: 'this is very cheap and delicious' })
     // await place.save()
     // res.send('Place added')
-    res.render('home')
+    res.redirect('/yummyplaces')
 })
 
 
