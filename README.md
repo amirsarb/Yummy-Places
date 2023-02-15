@@ -1,6 +1,5 @@
 <div>
-  <h1 align="center">HeroCard game in React 🧑‍💻</h1>
-  <p><strong>This is a simple practice for React</strong></p>
+  <h1 align="center">Yummyplace App - A list of restaurant - in Express 🧑‍💻 </h1>
 <h2 style="">Goals:</h2>
   <ul>
   <li>
@@ -40,24 +39,27 @@ Express Session and Flash
   <p>
     Screenshots:
   </p>
-  <p>
+  <h3>
+  Home Page
   <img
       alt="Yummy Places"
       src="screenshot.jpg"
     />
-    </p>
-  <p>
+    </h3>
+  <h3>
+View Place / Leave a Review
   <img
       alt="Yummy Places"
       src="screenshot2.jpg"
     />
-    </p>
-  <p>
+    </h3>
+  <h3>
+  Edit Place
   <img
       alt="Yummy Places"
       src="screenshot3.jpg"
     />
-    </p>
+    </h3>
 </div>
 
 <hr />
@@ -95,8 +97,21 @@ $ npm install express
 Follow [our installing guide](http://expressjs.com/en/starter/installing.html)
 for more information.
 
-
 ## Quick Start
+
+- DB configuration is in index.js
+
+```javascript
+mongoose.connect('mongodb://localhost:27017/yummyplaces', {
+})
+const db = mongoose.connection
+
+db.on("error", () => { console.log(`mongoose connection error`) })
+db.once("open", () => {
+    console.log("connection is open")
+})
+```
+
 ### `node install`
 ### `node index.js`
 
